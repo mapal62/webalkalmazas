@@ -1,34 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
 section {
-    width: 80%;
-    margin: auto;
-    background-color: lightsteelblue;
-    padding: 30px;
+    width: 1100px;
+    margin: 10px auto;
+    background: linear-gradient(0.25turn, #c7c5c5, #f4f4f3, #c7c5c5);
+    padding: 100px 0 100px;
 }
 
 .lap {
-    display: flex;
+    margin: 0 auto;
+    /* height: 300px; */
+    width: 900px;
     background-color: white;
-    width: 80%;
-    margin: auto;
-    justify-content: space-between;
-}
-
-.kozep {
-    width: 500px;
-}
-
-.lap .nyil {
-    height: 50px;
+    display: flex;
+    /* overflow: hidden; */
 }
 
 .tartalom {
     position: relative;
-    height: 500px;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+
+.kozepkep {
+    height: 400px;
+    overflow: hidden;
 }
 
 .felirat {
     position: absolute;
     bottom: 0;
-    background-color: grey;
+    background-color: rgba(14, 11, 11, 0.65);
+    color: rgb(233, 230, 52);
+    max-width: 600px;
+    padding: 5px;
+}
+
+.balra,
+.jobbra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    /* height: 300px; */
+}
+
+.lap .nyil {
+    width: 80%;
+}
+
+.jobbra .nyil {
+    transform: rotate(180deg);
+}
+
+.felirat h3 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+p {
+    font-weight: 400;
+}
+
+.kereso {
+    display: flex;
+    width: 50%;
+    margin: 30px auto;
+    justify-content: space-between;
+}
+
+.kereso div {
+    border: 3px solid black;
+    width: 50px;
+    height: 50px;
 }
