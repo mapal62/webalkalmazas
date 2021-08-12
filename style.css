@@ -17,16 +17,16 @@ section {
     width: 1100px;
     margin: 10px auto;
     background: linear-gradient(0.25turn, #a3a3a3, #f7f7f3, #a3a3a3);
-    padding: 100px 0 100px;
+    padding: 10px 0 100px;
 }
 
 .lap {
     margin: 0 auto;
-    /* height: 300px; */
+    padding: 5px 0;
     width: 900px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.4);
     display: flex;
-    /* overflow: hidden; */
+    border-radius: 7.5%;
 }
 
 .tartalom {
@@ -39,6 +39,25 @@ section {
 .kozepkep {
     height: 400px;
     overflow: hidden;
+    display: flex;
+}
+
+.flexend {
+    align-items: flex-end;
+}
+
+.flexstart {
+    align-items: flex-start;
+}
+
+.flexcenter {
+    align-items: center;
+}
+
+#photo {
+    min-width: 800px;
+    min-height: 400px;
+    display: block;
 }
 
 .felirat {
@@ -60,7 +79,7 @@ section {
 }
 
 .lap .nyil {
-    width: 80%;
+    width: 75%;
 }
 
 .jobbra .nyil {
@@ -68,13 +87,14 @@ section {
 }
 
 .felirat h3 {
-    margin-top: 0;
+    margin: 0;
     font-weight: 700;
     font-size: 1.5rem;
 }
 
 p {
     font-weight: 400;
+    margin: 0;
 }
 
 .kereso {
