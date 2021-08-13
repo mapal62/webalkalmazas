@@ -35,11 +35,18 @@ let kepAthen = {
     description: "Görögország fővárosa. A modern Athén hatalmas, kozmopolita jellegű város; az ókori Athén nagy hatalmú városállam és jelentős tudományos központ volt. Lakossága elővárosokkal együtt körülbelül 3,5 millió, ez Görögország lakosságának mintegy 35%-a.",
     vertical: "flexcenter"
 }
+let kepPlarium = {
+    photo: "images/plarium.jpg",
+    title: "Plarium Warrior",
+    description: "Szervezz klánokat és kalandozzátok végig az ismert világokat!",
+    vertical: "flexstart"
+}
 let varosKepek = [
     kepParis,
     kepLondon,
     kepRoma,
     kepBerlin,
     kepMadrid,
-    kepAthen
+    kepAthen,
+    kepPlarium
 ];
