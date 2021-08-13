@@ -1,5 +1,5 @@
 let melyikVaros = varosKepek.length - 1;
-valasztas(varosKepek[melyikVaros]);
+valasztas(melyikVaros);
 
 varosKepek.forEach((kep, melyik) => {
     console.log(kep.photo);
@@ -10,7 +10,8 @@ varosKepek.forEach((kep, melyik) => {
     `);
 })
 
-function valasztas(varos) {
+function valasztas(melyik) {
+    let varos = varosKepek[melyik];
     $('#photo').attr('src', varos.photo);
     $('#photo-title').text(varos.title);
     $('#photo-description').text(varos.description);
@@ -29,7 +30,15 @@ function valasztas(varos) {
         $('.kozepkep').removeClass("flexstart")
         $('.kozepkep').addClass(varos.vertical)
     }
+    for (let i = 0; i < varosKepek.length; i++) {
+        if (i === melyik) {
+            $(`.indexkep:nth-of-type(${i+1})`).addClass('arnyek');
+        } else {
+            $(`.indexkep:nth-of-type(${i+1})`).removeClass('arnyek');
+        }
+    }
 }
+
 $('.jobbra').click(elore);
 $('.balra').click(vissza);
 $(document).keydown((event) => {
@@ -48,7 +57,7 @@ function elore() {
     if (melyikVaros >= varosKepek.length) {
         melyikVaros = 0;
     }
-    valasztas(varosKepek[melyikVaros]);
+    valasztas(melyikVaros);
 }
 
 function vissza() {
@@ -56,12 +65,12 @@ function vissza() {
     if (melyikVaros < 0) {
         melyikVaros = varosKepek.length - 1;
     }
-    valasztas(varosKepek[melyikVaros]);
+    valasztas(melyikVaros);
 }
 // $('.indexkep').on('click', (event) => {
 $('.indexkep').click((event) => {
     //    console.log(event.currentTarget);
     let sorszam = $(event.currentTarget).attr('data-index');
     melyikVaros = parseInt(sorszam);
-    valasztas(varosKepek[melyikVaros]);
+    valasztas(melyikVaros);
 })

@@ -17,7 +17,7 @@ section {
     width: 1100px;
     margin: 10px auto;
     background: linear-gradient(0.25turn, #a3a3a3, #f7f7f3, #a3a3a3);
-    padding: 10px 0 100px;
+    padding: 10px 0 50px;
 }
 
 .lap {
@@ -101,11 +101,12 @@ p {
     display: flex;
     width: 80%;
     margin: 30px auto;
+    padding-top: 20px;
     justify-content: space-between;
 }
 
 .kereso div {
-    border: 3px solid black;
+    border: 1px solid grey;
     width: 80px;
     height: 60px;
     display: flex;
@@ -114,6 +115,14 @@ p {
     overflow: hidden;
 }
 
+.kereso div:hover {
+    box-shadow: 0 0 30px 10px orange;
+}
+
 .indexkep img {
     height: 80px;
+}
+
+.arnyek {
+    box-shadow: 0 0 20px 5px;
 }
