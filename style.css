@@ -97,15 +97,23 @@ p {
     margin: 0;
 }
 
-.kereso {
+.kereso,
+.miez {
     display: flex;
     width: 80%;
-    margin: 30px auto;
-    padding-top: 20px;
+    margin: 0 auto;
+    padding-top: 10px;
     justify-content: space-between;
 }
 
-.kereso div {
+.kepcim {
+    text-align: center;
+    width: 80px;
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+.indexkep {
     border: 1px solid grey;
     width: 80px;
     height: 60px;
@@ -115,8 +123,10 @@ p {
     overflow: hidden;
 }
 
-.kereso div:hover {
+.indexkep:hover {
     box-shadow: 0 0 30px 10px orange;
+    font-size: 1rem;
+    font-display: ;
 }
 
 .indexkep img {
@@ -125,4 +135,8 @@ p {
 
 .arnyek {
     box-shadow: 0 0 20px 5px;
+}
+
+.lathato {
+    visibility: visible;
 }

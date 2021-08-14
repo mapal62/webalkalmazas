@@ -1,9 +1,14 @@
 varosKepek.forEach((kep, melyik) => {
     console.log(kep.photo);
+    cim = kep.title.split(' ', 1);
+    console.log(cim);
     $('.kereso').append(`
     <div class="indexkep" data-index="${melyik}">
     <img src="${kep.photo}" alt="">
     </div>
+    `);
+    $('.miez').append(`
+    <h3 class="kepcim">${cim[0]}</h3>
     `);
 })
 
@@ -20,6 +25,18 @@ $('.indexkep').click((event) => {
     melyikVaros = parseInt(sorszam);
     valasztas(melyikVaros);
 })
+$('.indexkep').hover((event) => {
+        //    console.log(event.currentTarget);
+        let sorszam = $(event.currentTarget).attr('data-index');
+        melyikVaros = parseInt(sorszam);
+        $(`.kepcim:nth-of-type(${melyikVaros+1})`).addClass('lathato');
+    },
+    (event) => {
+        //    console.log(event.currentTarget);
+        let sorszam = $(event.currentTarget).attr('data-index');
+        melyikVaros = parseInt(sorszam);
+        $(`.kepcim:nth-of-type(${melyikVaros+1})`).removeClass('lathato');
+    })
 
 $(document).keydown((event) => {
     if (event.which === 39) {
