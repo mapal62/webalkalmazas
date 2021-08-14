@@ -18,6 +18,23 @@ valasztas(melyikVaros);
 // események élesítése
 $('.jobbra').click(elore);
 $('.balra').click(vissza);
+
+let egeres;
+$('.indexkep').hover((event) => {
+        //    console.log(event.currentTarget);
+        let sorszam = $(event.currentTarget).attr('data-index');
+        egeres = parseInt(sorszam);
+        $(`.kepcim:nth-of-type(${egeres+1})`).addClass('lathato');
+    },
+    (event) => {
+        //    console.log(event.currentTarget);
+        let sorszam = $(event.currentTarget).attr('data-index');
+        egeres = parseInt(sorszam);
+        if (egeres !== melyikVaros) {
+            $(`.kepcim:nth-of-type(${egeres+1})`).removeClass('lathato');
+        }
+    })
+
 // $('.indexkep').on('click', (event) => {
 $('.indexkep').click((event) => {
     //    console.log(event.currentTarget);
@@ -25,18 +42,7 @@ $('.indexkep').click((event) => {
     melyikVaros = parseInt(sorszam);
     valasztas(melyikVaros);
 })
-$('.indexkep').hover((event) => {
-        //    console.log(event.currentTarget);
-        let sorszam = $(event.currentTarget).attr('data-index');
-        melyikVaros = parseInt(sorszam);
-        $(`.kepcim:nth-of-type(${melyikVaros+1})`).addClass('lathato');
-    },
-    (event) => {
-        //    console.log(event.currentTarget);
-        let sorszam = $(event.currentTarget).attr('data-index');
-        melyikVaros = parseInt(sorszam);
-        $(`.kepcim:nth-of-type(${melyikVaros+1})`).removeClass('lathato');
-    })
+
 
 $(document).keydown((event) => {
     if (event.which === 39) {
@@ -73,8 +79,10 @@ function valasztas(melyik) {
     for (let i = 0; i < varosKepek.length; i++) {
         if (i === melyik) {
             $(`.indexkep:nth-of-type(${i+1})`).addClass('arnyek');
+            $(`.kepcim:nth-of-type(${i+1})`).addClass('lathato');
         } else {
             $(`.indexkep:nth-of-type(${i+1})`).removeClass('arnyek');
+            $(`.kepcim:nth-of-type(${i+1})`).removeClass('lathato');
         }
     }
 }
