@@ -140,3 +140,7 @@ p {
 .lathato {
     visibility: visible;
 }
+
+.tartalom:hover .felirat {
+    color: chartreuse;
+}
